@@ -1,0 +1,62 @@
+[
+    {
+        "Name": "Cloudflare",
+        "Image": "cloudflare.ico",
+        "Pds": "1.1.1.1",
+        "Ads": "1.0.0.1"
+    },
+    {
+        "Name": "403",
+        "Image": "403online.ico",
+        "Pds": "10.202.10.202",
+        "Ads": "10.202.10.102"
+    },
+    {
+        "Name": "Shecan",
+        "Image": "shecan.png",
+        "Pds": "178.22.122.100",
+        "Ads": "185.51.200.2"
+    },
+    {
+        "Name": "Electro",
+        "Image": "electro.ico",
+        "Pds": "78.157.42.101",
+        "Ads": "78.157.42.100"
+    },
+    {
+        "Name": "Radar",
+        "Image": "radar.ico",
+        "Pds": "10.202.10.10",
+        "Ads": "10.202.10.11"
+    },
+    {
+        "Name": "GPD",
+        "Image": "GPD.png",
+        "Pds": "8.8.8.8",
+        "Ads": "8.8.4.4"
+    },
+    {
+        "Name": "Hostiran",
+        "Image": "hostiran.ico",
+        "Pds": "172.29.0.100",
+        "Ads": "172.29.2.100"
+    },
+    {
+        "Name": "Pishgaman",
+        "Image": "pishgaman.ico",
+        "Pds": "5.202.100.100",
+        "Ads": "5.202.100.101"
+    },
+    {
+        "Name": "Begzar",
+        "Image": "begzar.png",
+        "Pds": "185.55.226.26",
+        "Ads": "185.55.225.25"
+    },
+    {
+        "Name": "Spotify",
+        "Image": "spotify.png",
+        "Pds": "78.157.42.100",
+        "Ads": "10.202.10.11"
+    }
+]
