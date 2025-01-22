@@ -1,9 +1,5 @@
 using System.Management;
-using System.Net;
 using System.Net.NetworkInformation;
-using System.Reflection;
-using System.Windows.Forms;
-using TDns.Models;
 
 namespace TDns
 {
