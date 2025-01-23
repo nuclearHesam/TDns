@@ -42,12 +42,6 @@
             ads2 = new TextBox();
             ads3 = new TextBox();
             ads4 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)Pic_Dns).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +57,7 @@
             // 
             // Lbl_Dnsname
             // 
-            Lbl_Dnsname.Font = new Font("Proxima Soft", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point);
+            Lbl_Dnsname.Font = new Font("Tahoma", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Lbl_Dnsname.Location = new Point(66, 12);
             Lbl_Dnsname.Margin = new Padding(0);
             Lbl_Dnsname.Name = "Lbl_Dnsname";
@@ -74,7 +68,7 @@
             // 
             // btnSet
             // 
-            btnSet.Font = new Font("Proxima Soft", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSet.Font = new Font("Tahoma", 8F);
             btnSet.Location = new Point(12, 188);
             btnSet.Margin = new Padding(3, 4, 3, 4);
             btnSet.Name = "btnSet";
@@ -86,7 +80,7 @@
             // 
             // btnUnset
             // 
-            btnUnset.Font = new Font("Proxima Soft", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btnUnset.Font = new Font("Tahoma", 8F);
             btnUnset.Location = new Point(120, 188);
             btnUnset.Margin = new Padding(3, 4, 3, 4);
             btnUnset.Name = "btnUnset";
@@ -99,155 +93,101 @@
             // Cmx_Dns
             // 
             Cmx_Dns.DropDownStyle = ComboBoxStyle.DropDownList;
-            Cmx_Dns.Font = new Font("Proxima Soft SemiBold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            Cmx_Dns.Font = new Font("Tahoma", 8F);
             Cmx_Dns.FormattingEnabled = true;
             Cmx_Dns.Location = new Point(12, 149);
             Cmx_Dns.Name = "Cmx_Dns";
-            Cmx_Dns.Size = new Size(216, 34);
+            Cmx_Dns.Size = new Size(216, 24);
             Cmx_Dns.TabIndex = 5;
             Cmx_Dns.SelectedIndexChanged += CmxDnses_SelectedIndexChanged;
             // 
             // pds1
             // 
-            pds1.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            pds1.Font = new Font("Tahoma", 7.8F);
             pds1.Location = new Point(12, 67);
             pds1.MaxLength = 3;
             pds1.Name = "pds1";
             pds1.ReadOnly = true;
-            pds1.Size = new Size(48, 38);
+            pds1.Size = new Size(48, 23);
             pds1.TabIndex = 6;
             pds1.TextAlign = HorizontalAlignment.Center;
             // 
             // pds2
             // 
-            pds2.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            pds2.Font = new Font("Tahoma", 7.8F);
             pds2.Location = new Point(67, 67);
             pds2.MaxLength = 3;
             pds2.Name = "pds2";
             pds2.ReadOnly = true;
-            pds2.Size = new Size(48, 38);
+            pds2.Size = new Size(48, 23);
             pds2.TabIndex = 6;
             pds2.TextAlign = HorizontalAlignment.Center;
             // 
             // pds3
             // 
-            pds3.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            pds3.Font = new Font("Tahoma", 7.8F);
             pds3.Location = new Point(124, 67);
             pds3.MaxLength = 3;
             pds3.Name = "pds3";
             pds3.ReadOnly = true;
-            pds3.Size = new Size(48, 38);
+            pds3.Size = new Size(48, 23);
             pds3.TabIndex = 6;
             pds3.TextAlign = HorizontalAlignment.Center;
             // 
             // pds4
             // 
-            pds4.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            pds4.Font = new Font("Tahoma", 7.8F);
             pds4.Location = new Point(180, 67);
             pds4.MaxLength = 3;
             pds4.Name = "pds4";
             pds4.ReadOnly = true;
-            pds4.Size = new Size(48, 38);
+            pds4.Size = new Size(48, 23);
             pds4.TabIndex = 6;
             pds4.TextAlign = HorizontalAlignment.Center;
             // 
             // ads1
             // 
-            ads1.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ads1.Font = new Font("Tahoma", 7.8F);
             ads1.Location = new Point(12, 106);
             ads1.MaxLength = 3;
             ads1.Name = "ads1";
             ads1.ReadOnly = true;
-            ads1.Size = new Size(48, 38);
+            ads1.Size = new Size(48, 23);
             ads1.TabIndex = 6;
             ads1.TextAlign = HorizontalAlignment.Center;
             // 
             // ads2
             // 
-            ads2.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ads2.Font = new Font("Tahoma", 7.8F);
             ads2.Location = new Point(67, 106);
             ads2.MaxLength = 3;
             ads2.Name = "ads2";
             ads2.ReadOnly = true;
-            ads2.Size = new Size(48, 38);
+            ads2.Size = new Size(48, 23);
             ads2.TabIndex = 6;
             ads2.TextAlign = HorizontalAlignment.Center;
             // 
             // ads3
             // 
-            ads3.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ads3.Font = new Font("Tahoma", 7.8F);
             ads3.Location = new Point(124, 106);
             ads3.MaxLength = 3;
             ads3.Name = "ads3";
             ads3.ReadOnly = true;
-            ads3.Size = new Size(48, 38);
+            ads3.Size = new Size(48, 23);
             ads3.TabIndex = 6;
             ads3.TextAlign = HorizontalAlignment.Center;
             // 
             // ads4
             // 
-            ads4.Font = new Font("Microsoft JhengHei", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            ads4.Font = new Font("Tahoma", 7.8F);
             ads4.Location = new Point(180, 106);
             ads4.MaxLength = 3;
             ads4.Name = "ads4";
             ads4.ReadOnly = true;
-            ads4.Size = new Size(48, 38);
+            ads4.Size = new Size(48, 23);
             ads4.TabIndex = 6;
             ads4.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(54, 64);
-            label1.Name = "label1";
-            label1.Size = new Size(21, 31);
-            label1.TabIndex = 7;
-            label1.Text = ".";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(110, 64);
-            label2.Name = "label2";
-            label2.Size = new Size(21, 31);
-            label2.TabIndex = 8;
-            label2.Text = ".";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(166, 64);
-            label3.Name = "label3";
-            label3.Size = new Size(21, 31);
-            label3.TabIndex = 8;
-            label3.Text = ".";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(110, 99);
-            label4.Name = "label4";
-            label4.Size = new Size(21, 31);
-            label4.TabIndex = 8;
-            label4.Text = ".";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(167, 99);
-            label5.Name = "label5";
-            label5.Size = new Size(21, 31);
-            label5.TabIndex = 8;
-            label5.Text = ".";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(54, 99);
-            label6.Name = "label6";
-            label6.Size = new Size(21, 31);
-            label6.TabIndex = 7;
-            label6.Text = ".";
             // 
             // Form1
             // 
@@ -267,13 +207,7 @@
             Controls.Add(btnSet);
             Controls.Add(Lbl_Dnsname);
             Controls.Add(Pic_Dns);
-            Controls.Add(label6);
-            Controls.Add(label1);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label4);
-            Controls.Add(label2);
-            Font = new Font("Proxima Soft ExtraBold", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point);
+            Font = new Font("Tahoma", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(6, 5, 6, 5);
@@ -304,11 +238,5 @@
         private TextBox ads2;
         private TextBox ads3;
         private TextBox ads4;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
     }
 }
