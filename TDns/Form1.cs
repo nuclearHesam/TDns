@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Management;
 using System.Net.NetworkInformation;
 
@@ -5,26 +6,36 @@ namespace TDns
 {
     public partial class Form1 : Form
     {
-        private readonly List<Models.Dns> dnsProviders = new() { };
+        private readonly List<Dns> dnsProviders = [];
+        private Dns? dns;
 
         public Form1()
         {
             InitializeComponent();
 
-            dnsProviders = new List<Models.Dns>
-                {
-                new() { Name = "403", Image = Properties.Resources._403o, Pds = "10.202.10.202", Ads = "10.202.10.102" },
-                new() { Name = "Shecan", Image = Properties.Resources.shecan, Pds = "178.22.122.100", Ads = "185.51.200.2" },
-                new() { Name = "Electro", Image = Properties.Resources.electro, Pds = "78.157.42.101", Ads = "78.157.42.100" },
-                new() { Name = "Tci", Image = Properties.Resources.tci, Pds = "91.239.100.100", Ads = "89.233.43.71" },
-                new() { Name = "Mci", Image = Properties.Resources.mci, Pds = "208.67.220.200", Ads = "208.67.222.222" },
-                new() { Name = "Irancell", Image = Properties.Resources.irancell, Pds = "109.69.8.51", Ads = "74.82.42.42" },
-                new() { Name = "Rightel", Image = Properties.Resources.rightel, Pds = "91.239.100.100", Ads = "89.233.43.71" },
-                new() { Name = "Cloudflare", Image = Properties.Resources.cloudflare, Pds = "1.1.1.1", Ads = "1.0.0.1" },
-                new() { Name = "Google", Image = Properties.Resources.google, Pds = "8.8.8.8", Ads = "8.8.4.4" },
-                new() { Name = "Quad9", Image = Properties.Resources.quad9, Pds = "9.9.9.9", Ads = "149.112.112.112" },
-                new() { Name = "Spotify", Image = Properties.Resources.spotify, Pds = "78.157.42.100", Ads = "10.202.10.11" },
-            };
+            dnsProviders = [
+                new() { Name = "403", Image = Properties.Resources._403o, Pds = "10.202.10.202", Ads = "10.202.10.102",Link="https://403.online/" },
+
+                new() { Name = "Shecan", Image = Properties.Resources.shecan, Pds = "178.22.122.100", Ads = "185.51.200.2",Link="https://shecan.ir/" },
+
+                new() { Name = "Electro", Image = Properties.Resources.electro, Pds = "78.157.42.101", Ads = "78.157.42.100",Link="https://electrotm.org/" },
+
+                new() { Name = "Tci", Image = Properties.Resources.tci, Pds = "91.239.100.100", Ads = "89.233.43.71",Link="https://www.tci.ir/" },
+
+                new() { Name = "Mci", Image = Properties.Resources.mci, Pds = "208.67.220.200", Ads = "208.67.222.222",Link="https://mci.ir/" },
+
+                new() { Name = "Irancell", Image = Properties.Resources.irancell, Pds = "109.69.8.51", Ads = "74.82.42.42",Link="https://irancell.ir/" },
+
+                new() { Name = "Rightel", Image = Properties.Resources.rightel, Pds = "91.239.100.100", Ads = "89.233.43.71",Link="https://www.rightel.ir/" },
+
+                new() { Name = "Cloudflare", Image = Properties.Resources.cloudflare, Pds = "1.1.1.1", Ads = "1.0.0.1",Link="https://developers.cloudflare.com/1.1.1.1/ip-addresses/#:~:text=1.1.1.1%20is%20Cloudflare%E2%80%99s" },
+
+                new() { Name = "Google", Image = Properties.Resources.google, Pds = "8.8.8.8", Ads = "8.8.4.4",Link="https://developers.google.com/speed/public-dns/" },
+
+                new() { Name = "Quad9", Image = Properties.Resources.quad9, Pds = "9.9.9.9", Ads = "149.112.112.112",Link="https://www.quad9.net/" },
+
+                new() { Name = "Spotify", Image = Properties.Resources.spotify, Pds = "78.157.42.100", Ads = "10.202.10.11",Link="https://spotify.com" },
+            ];
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,7 +46,7 @@ namespace TDns
             }
             Cmx_Dns.SelectedIndex = 0;
 
-            Models.Dns dns = dnsProviders[0];
+            Dns dns = dnsProviders[0];
 
             byte[] imageBytes = dns.Image;
             using MemoryStream ms = new(imageBytes);
@@ -57,8 +68,8 @@ namespace TDns
         private void CmxDnses_SelectedIndexChanged(object sender, EventArgs e)
         {
             int index = Cmx_Dns.SelectedIndex;
-            
-            Models.Dns dns = dnsProviders[index];
+
+            dns = dnsProviders[index];
 
             using MemoryStream memoryStream = new(dns.Image);
             Pic_Dns.Image = Image.FromStream(memoryStream);
@@ -79,9 +90,9 @@ namespace TDns
         private void BtnSet_Click(object sender, EventArgs e)
         {
             int index = Cmx_Dns.SelectedIndex;
-            Models.Dns dns = dnsProviders[index];
+            Dns dns = dnsProviders[index];
 
-            string[] dnsServers = { dns.Pds, dns.Ads };
+            string[] dnsServers = [dns.Pds, dns.Ads];
 
             string networkAdapterName = GetActiveNetworkAdapterName();
 
@@ -210,6 +221,15 @@ namespace TDns
                 Console.WriteLine($"خطا در بازگرداندن تنظیمات DNS: {ex.Message}");
             }
             return false;
+        }
+
+        private void Pic_Dns_Click(object sender, EventArgs e)
+        {
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = dns.Link,
+                UseShellExecute = true // برای اطمینان از باز شدن لینک در مرورگر پیش‌فرض
+            });
         }
     }
 }

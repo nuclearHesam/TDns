@@ -1,4 +1,4 @@
-﻿namespace TDns.Models
+﻿namespace TDns
 {
     public class Dns
     {
@@ -8,5 +8,7 @@
         public string Pds { get; set; } = default!;
         //  Alternate Dns Server
         public string Ads { get; set; } = default!;
+
+        public string Link { get; set; } = default!;
     }
 }

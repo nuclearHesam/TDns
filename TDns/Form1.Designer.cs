@@ -47,6 +47,7 @@
             // 
             // Pic_Dns
             // 
+            Pic_Dns.Cursor = Cursors.Hand;
             Pic_Dns.Location = new Point(12, 12);
             Pic_Dns.Margin = new Padding(3, 4, 3, 4);
             Pic_Dns.Name = "Pic_Dns";
@@ -54,9 +55,11 @@
             Pic_Dns.SizeMode = PictureBoxSizeMode.StretchImage;
             Pic_Dns.TabIndex = 2;
             Pic_Dns.TabStop = false;
+            Pic_Dns.Click += Pic_Dns_Click;
             // 
             // Lbl_Dnsname
             // 
+            Lbl_Dnsname.Cursor = Cursors.Hand;
             Lbl_Dnsname.Font = new Font("Tahoma", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Lbl_Dnsname.Location = new Point(66, 12);
             Lbl_Dnsname.Margin = new Padding(0);
@@ -65,6 +68,7 @@
             Lbl_Dnsname.TabIndex = 3;
             Lbl_Dnsname.Text = "403";
             Lbl_Dnsname.TextAlign = ContentAlignment.MiddleLeft;
+            Lbl_Dnsname.Click += Pic_Dns_Click;
             // 
             // btnSet
             // 
